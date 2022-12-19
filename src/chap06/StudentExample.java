@@ -13,11 +13,6 @@ public class StudentExample{
 		System.out.println(h1.number);
 		System.out.println(h1.number);
 		
-		System.out.println("수정함");
-		System.out.println("수정함");
-		System.out.println("수정함");
-		
-		
 	}
 	
 	
