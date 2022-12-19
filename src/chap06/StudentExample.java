@@ -15,6 +15,7 @@ public class StudentExample{
 		
 		System.out.println("수정함");
 		System.out.println("수정함");
+		System.out.println("수정함");
 		
 		
 	}
