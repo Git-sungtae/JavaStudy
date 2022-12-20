@@ -10,8 +10,9 @@ public class StudentExample{
 		//Student클래스의 필드들을 사용할 수 있음
 		
 		HighStudent h1 = new HighStudent();
+		System.out.println(h1.school);
 		System.out.println(h1.number);
-		System.out.println(h1.number);
+		
 		
 	}
 	
