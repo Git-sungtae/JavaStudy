@@ -1,7 +1,5 @@
 package chap06;
 
-import javax.print.attribute.SupportedValuesAttribute;
-
 public class Calculator {
 	//219p
 	//메소드 만들어보기
