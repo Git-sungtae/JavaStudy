@@ -54,9 +54,27 @@ class Cart{
 		case "검정" : 
 		case "검정색":
 			if (blackStack>0) {
-				System.out.println("검정색 카트의 재고가 " + blackStack + "개 남았습니다.");
-				result = true;
-				blackStack -= 1;
+				System.out.println("검정색 카트의 재고가 " + blackStack + "개 남았습니다. 구매하시겠습니까?");
+				System.out.println("구매 : 1 입력, 더 구경하기 : 2 입력");
+				Scanner scanner2 = new Scanner(System.in);
+				int value = scanner2.nextInt();
+				switch (value) {
+					case 1 : 
+						System.out.println("구매해주셔서 감사합니다, 프로그램을 종료합니다.");
+						blackStack -= 1;
+						result = false;
+					break;
+					
+					case 2 :
+						result =true;
+						break;
+
+				default:
+					System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
+					result = true;
+					break;
+				}
+				
 				
 			} else if(blackStack==0){
 				System.out.println("검정색 카트의 재고가 없습니다.");
@@ -67,9 +85,27 @@ class Cart{
 		case "흰":
 		case "흰색":
 			if (whiteStack>0) {
-				System.out.println("흰색 카트의 재고가 " + whiteStack + "개 남았습니다.");
-				result = true;
-				whiteStack -= 1;
+				System.out.println("흰색 카트의 재고가 " + whiteStack + "개 남았습니다. 구매하시겠습니까?");
+				System.out.println("구매 : 1 입력, 더 구경하기 : 2 입력");
+				Scanner scanner2 = new Scanner(System.in);
+				int value = scanner2.nextInt();
+				switch (value) {
+					case 1 : 
+						System.out.println("구매해주셔서 감사합니다, 프로그램을 종료합니다.");
+						whiteStack -= 1;
+						result = false;
+					break;
+					
+					case 2 :
+						result =true;
+						break;
+
+				default:
+					System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
+					result = true;
+					break;
+				}
+				
 			} else if(whiteStack==0){
 				System.out.println("흰색 카트의 재고가 없습니다.");
 				result = true;
@@ -93,7 +129,7 @@ class Cart{
 	
 }
 
-public class ConstructorOverride {
+public class CartStackSystem {
 
 	public static void main(String[] args) {
 		//메서드 오버라이딩
