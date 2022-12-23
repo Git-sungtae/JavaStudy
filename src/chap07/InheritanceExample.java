@@ -1,4 +1,4 @@
-package chap06;
+package chap07;
 
 class CellPhone{
 //필드	
@@ -78,7 +78,6 @@ class iPhone extends CellPhone{
 }
 
 public class InheritanceExample {
-
 	public static void main(String[] args) {
 	
 		iPhone i = new iPhone("아이폰", "검정", 10);
@@ -102,11 +101,6 @@ public class InheritanceExample {
 		CellPhone cp = new CellPhone();
 		System.out.println(cp.color);
 		System.out.println(cp.model);
-		
-		
-		
-		
-		
 		
 	}
 
