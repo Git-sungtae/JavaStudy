@@ -23,6 +23,14 @@ class CellPhone{
 		System.out.println("전원을 끕니다");
 	}
 	
+	void volOn() {
+		System.out.println("소리를 킵니다");
+	}
+	
+	void volOff() {
+		System.out.println("소리를 끕니다");
+	}
+	
 	
 	
 }
@@ -74,6 +82,9 @@ class iPhone extends CellPhone{
 		//상속시 똑같은 이름의 메서드를 사용하기만 하면 오버라이드
 		System.out.println("5초후 종료합니다.");
 	}
+	
+	
+	
 	
 }
 
