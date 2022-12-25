@@ -1,4 +1,4 @@
-package chap06;
+package chap07;
 
 class CellPhone{
 //필드	
@@ -21,6 +21,14 @@ class CellPhone{
 	
 	void powerOff() {
 		System.out.println("전원을 끕니다");
+	}
+	
+	void volOn() {
+		System.out.println("소리를 킵니다");
+	}
+	
+	void volOff() {
+		System.out.println("소리를 끕니다");
 	}
 	
 	
@@ -75,10 +83,12 @@ class iPhone extends CellPhone{
 		System.out.println("5초후 종료합니다.");
 	}
 	
+	
+	
+	
 }
 
 public class InheritanceExample {
-
 	public static void main(String[] args) {
 	
 		iPhone i = new iPhone("아이폰", "검정", 10);
@@ -102,11 +112,6 @@ public class InheritanceExample {
 		CellPhone cp = new CellPhone();
 		System.out.println(cp.color);
 		System.out.println(cp.model);
-		
-		
-		
-		
-		
 		
 	}
 
