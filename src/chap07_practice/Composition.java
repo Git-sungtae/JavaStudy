@@ -1,4 +1,4 @@
-package chap06_practice;
+package chap07_practice;
 
 class Point{
 	private int x;

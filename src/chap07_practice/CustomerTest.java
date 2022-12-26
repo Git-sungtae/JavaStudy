@@ -1,4 +1,4 @@
-package chap06_practice;
+package chap07_practice;
 
 public class CustomerTest {
 

@@ -1,6 +1,6 @@
 package chap07;
 
-class Parent{
+class Parent2{
 //필드
 	int parentField = 99;
 //생성자
@@ -16,7 +16,7 @@ class Parent{
 	
 }
 
-class ChildA extends Parent{
+class ChildA extends Parent2{
 	
 	int childAField;
 	
@@ -35,7 +35,7 @@ class ChildA extends Parent{
 }
 
 
-class ChildB extends Parent{
+class ChildB extends Parent2{
 	int childBField;
 	
 	void childBMethod() {
@@ -50,7 +50,7 @@ class ChildB extends Parent{
 	
 }
 
-class ChildC extends Parent{
+class ChildC extends Parent2{
 	int childCField;
 	
 	void childCMethod() {
@@ -74,9 +74,9 @@ public class PolyExample {
 		ChildB b = new ChildB();
 		ChildC c = new ChildC();
 		//부모타입으로 자동형변환
-		Parent p1 = a;
-		Parent p2 = b;
-		Parent p3 = c;
+		Parent2 p1 = a;
+		Parent2 p2 = b;
+		Parent2 p3 = c;
 		//형변환 후 자식클래스의 멤버 사용 → 컴파일에러
 //		p1.childAField;
 //		p2.childBField;

@@ -1,4 +1,4 @@
-package chap06_practice;
+package chap07_practice;
 
 //등급차등이 있는 고객관리 프로그램
 //새로운 VIP 등급인 고객을 따로 관리하기 위한 프로그램 필요 > 상속으로 VipCustomer 클래스 구현

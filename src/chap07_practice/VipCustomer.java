@@ -1,4 +1,4 @@
-package chap06_practice;
+package chap07_practice;
 //추가할 기능 : 담당삼당원 배정 추가, 상품할인률 추가,보너스적립률 수정
 public class VipCustomer extends Customer{
 

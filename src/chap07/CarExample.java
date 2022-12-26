@@ -2,40 +2,70 @@ package chap07;
 
 class Car {
 	// 필드
-	Tire frontLeftTire = new Tire("앞왼쪽", 6);
-	Tire frontRightTire = new Tire("앞오른쪽", 2);
-	Tire backLeftTire = new Tire("뒤왼쪽", 3);
-	Tire backRightTire = new Tire("뒤오른쪽", 4);
+	Tire frontLeftTire = new Tire("앞왼쪽", 1);
+	Tire frontRightTire = new Tire("앞오른쪽", 1);
+	Tire backLeftTire = new Tire("뒤왼쪽", 1);
+	Tire backRightTire = new Tire("뒤오른쪽", 1);
+	//배열로 객체를 관리
+	Tire[] tires = {
+			new Tire("앞왼쪽", 1),
+			new Tire("앞오른쪽", 1),
+			new Tire("뒤왼쪽", 1),
+			new Tire("뒤오른쪽", 1)
+	};
+	
 	// 생성자
 
 	// 메서드
 	int run() {
+//		System.out.println("자동차가 달립니다.");
+//		if (frontLeftTire.roll() == false) {
+//			stop();
+//			return 1;
+//		}
+//		if (frontRightTire.roll() == false) {
+//			stop();
+//			return 2;
+//		}
+//		if (backLeftTire.roll() == false) {
+//			stop();
+//			return 3;
+//		}
+//		if (backRightTire.roll() == false) {
+//			stop();
+//			return 4;
+//		}
+//		return 0;
+		
+		//배열화된 객체로 인해 코드 간결하게 가능
+		
 		System.out.println("자동차가 달립니다.");
-		if (frontLeftTire.roll() == false) {
-			stop();
-			return 1;
+		for (int i = 0; i < tires.length; i++) {
+			if(tires[i].roll() == false) {
+				stop();
+				return (i+1);
+			}
 		}
-		if (frontRightTire.roll() == false) {
-			stop();
-			return 2;
-		}
-		if (backLeftTire.roll() == false) {
-			stop();
-			return 3;
-		}
-		if (backRightTire.roll() == false) {
-			stop();
-			return 4;
-		}
-
 		return 0;
 
+//		System.out.println("자동차가 달립니다.");
+//		frontLeftTire.roll();
+//		frontRightTire.roll();
+//		backLeftTire.roll();
+//		backRightTire.roll();
+//	}
+//	
+//	int findPunk(Tire tire){
+//		int result = 0;
+//		
+//		return result;
 	}
 
 	void stop() {
 		System.out.println("자동차가 멈춥니다.");
 	}
-
+	
+	
 }
 
 class Tire {
@@ -126,15 +156,15 @@ public class CarExample {
 
 			case 2:
 				System.out.println("앞오른쪽 KTire로 교체");
-				car.frontRightTire = new KTire("앞오른쪽", 13);
+				car.frontRightTire = new KTire("앞오른쪽", 15);
 				break;
 			case 3:
 				System.out.println("뒤왼쪽 HTire로 교체");
-				car.backLeftTire = new HTire("뒤왼쪽", 14);
+				car.backLeftTire = new HTire("뒤왼쪽", 15);
 				break;
 			case 4:
 				System.out.println("뒤오른쪽 KTire로 교체");
-				car.frontRightTire = new KTire("뒤오른쪽", 17);
+				car.frontRightTire = new KTire("뒤오른쪽", 15);
 				break;
 			}
 
