@@ -1,4 +1,4 @@
-package chap08_practice;
+package chap08_practice_1;
 //Calculator를 상속하는 메서드
 public class CompleteCalc extends Calculator {
 

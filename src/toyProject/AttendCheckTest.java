@@ -4,7 +4,7 @@ public class AttendCheckTest {
 
 	public static void main(String[] args) {
 
-		AttendCheckable at;
+		Checkable at;
 		at = new BeaconCheck("장성태",1227,830);
 		at.checkAttend(at);
 		System.out.println("===================================");

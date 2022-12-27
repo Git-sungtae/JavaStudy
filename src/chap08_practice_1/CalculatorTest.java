@@ -1,4 +1,4 @@
-package chap08_practice;
+package chap08_practice_1;
 
 public class CalculatorTest {
 
