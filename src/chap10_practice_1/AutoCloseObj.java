@@ -3,7 +3,7 @@ package chap10_practice_1;
 public class AutoCloseObj implements AutoCloseable{
 
 	@Override
-	public void close() throws Exception {
+	public void close()  {
 		System.out.println("close");		
 	}
 	

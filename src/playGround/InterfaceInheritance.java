@@ -1,4 +1,4 @@
-package toyProject;
+package playGround;
 
 public interface InterfaceInheritance extends Checkable{
 	
