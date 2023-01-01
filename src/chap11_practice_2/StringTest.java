@@ -12,6 +12,9 @@ public class StringTest {
 		String str3 = "abc";
 		String str4 = "abc";
 		
+		System.out.println(str1 == str3);
+		System.out.println(str1.hashCode());
+		System.out.println(str3.hashCode());
 		System.out.println(str3 == str4);
 		
 		String str5 = new String();
