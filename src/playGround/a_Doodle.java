@@ -1,11 +1,17 @@
 package playGround;
 
-interface MEDAL{
-	int GOLD = 1, SILVER = 2, BRONZE = 3;
-}
-public class a_Doodle {
+
+public class a_Doodle<T> implements Comparable<T>{
 	
 	public static void main(String[] args) {
 		
+		
+		
+	}
+
+	@Override
+	public int compareTo(T o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

@@ -1,4 +1,4 @@
-package chap12;
+package chap13;
 
 class Ink{
 	public String inkColor;
