@@ -1,4 +1,4 @@
-package chap14_practice;
+package chap15_practice;
 
 public class Member {
 	
@@ -10,6 +10,27 @@ public class Member {
 		this.memberName = memberName;
 	}
 	
+	//HashSet에서 동등객체 기준을 설정하기 위해
+	//hashCode와 Equals를 오버라이딩 해야한다.
+	@Override
+	public int hashCode() {
+		return memberId;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Member) {
+			Member member =(Member) obj;
+			if (member.memberId == this.memberId) {
+				return true;
+			} else {
+				return false;
+			}
+			
+		}
+		return false;
+	}
+
 	public int getMemberId() {
 		return memberId;
 	}

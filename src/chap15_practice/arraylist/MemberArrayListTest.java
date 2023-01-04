@@ -1,6 +1,8 @@
-package chap14_practice.arraylist;
+package chap15_practice.arraylist;
 
-import chap14_practice.Member;
+import java.util.ArrayList;
+
+import chap15_practice.Member;
 
 public class MemberArrayListTest {
 	
@@ -20,6 +22,23 @@ public class MemberArrayListTest {
 		//remove로 리스트 멤버 지우기
 		memberArrayList.removeMember(member1.getMemberId());
 		memberArrayList.showAll();
+		
+		ArrayList<Member> memList = new ArrayList<Member>();
+//		Member member1 = new Member(101, "101");
+//		Member member2 = new Member(102, "102");
+//		Member member3 = new Member(103, "103");
+//		
+//		memList.add(member1);
+//		memList.add(member2);
+//		memList.add(member3);
+//		
+//		System.out.println(memList);
+//		
+//		System.out.println(memList.remove(1));
+//		System.out.println(memList);
+//		
+//		memList.clear();
+//		System.out.println(memList);
 		
 	}
 

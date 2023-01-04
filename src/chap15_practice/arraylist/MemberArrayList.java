@@ -1,8 +1,9 @@
-package chap14_practice.arraylist;
+package chap15_practice.arraylist;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-import chap14_practice.Member;
+import chap15_practice.Member;
 
 public class MemberArrayList {
 	private ArrayList<Member> arrayList;
@@ -22,16 +23,38 @@ public class MemberArrayList {
 	//i번째 객체를 삭제(by remove(i)) → return true
 	//for문을 다 돌았음에도 일치하는게 없다면(for문 밖에서) → return false
 	public boolean removeMember(int memberId) {
-		for (int i = 0; i < arrayList.size(); i++) {
-			Member member = arrayList.get(i);
-			int tempId = member.getMemberId();
-			if (memberId == tempId) {
+//		for (int i = 0; i < arrayList.size(); i++) {
+//			Member member = arrayList.get(i);
+//			int tempId = member.getMemberId();
+//			if (memberId == tempId) {
+//				arrayList.remove(i);
+//				return true;
+//			}
+//		}
+		/*for(int i=0 ; i<arrayList.size() ; i++){
+			int tempId = arrayList.get(i).getMemberId();
+			if(tempId == memberId){
 				arrayList.remove(i);
 				return true;
 			}
 		}
 		System.out.println(memberId + "가 존재하지않습니다.");
+		return false;*/
+		
+		//반복문이 아닌 Iterator로 rmmove 구현
+		Iterator <Member> iterator = arrayList.iterator();
+		while(iterator.hasNext()) {
+			Member member = iterator.next();
+			
+			int tempId = member.getMemberId();
+			if(tempId == memberId){
+				arrayList.remove(member);
+				return true;
+			}
+		}
+		System.out.println(memberId + "가 존재하지않습니다.");
 		return false;
+		
 	}
 	
 	public void showAll() {
