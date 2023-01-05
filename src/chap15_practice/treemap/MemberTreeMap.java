@@ -1,4 +1,4 @@
-package chap15_practice.treeMap;
+package chap15_practice.treemap;
 
 import java.util.Iterator;
 import java.util.TreeMap;
