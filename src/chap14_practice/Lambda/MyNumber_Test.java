@@ -1,7 +1,5 @@
 package chap14_practice.Lambda;
 
-import java.util.Iterator;
-
 class NotAno implements MyNumber{
 
 	@Override
@@ -30,7 +28,8 @@ public class MyNumber_Test {
 			}
 		};
 		
-		NotAno myNum = new NotAno();  
+		int inMax = aaa.getMaxNumber(10, 20);
+		System.out.println(inMax);
 	}
 
 }
