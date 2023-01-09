@@ -1,20 +1,40 @@
 package playGround;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class a_Doodle{
 	
 	public static void main(String[] args) {
-		int[] intArr = new int[] {1,2,5,7,8,9,10};
-		ArrayList<Integer> arrList = new ArrayList<Integer>();
-		for (int i = 0; i < intArr.length; i++) {
-			arrList.add(intArr[i]);
+		
+		byte[] b = new byte[] {1,2,3,4,5};
+		try(FileOutputStream fos = new FileOutputStream("C://Users//user/mors.txt")) {
+			for (byte c : b) {
+				fos.write(c);
+			}
+		} catch(IOException e) {
+			System.out.println(e);
 		}
-		System.out.println(arrList);
-		List<Integer> list = Arrays.asList(1,2,3,4,5,6,7);
-		System.out.println(list);
+		
+		FileInputStream fis = null;
+		try {
+			int i = 0;
+			fis = new FileInputStream("C://Users//user/mors.txt");
+			while ((i = fis.read()) != -1 ) {
+				System.out.print(i);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				fis.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("end");
+				
 		
 		
 	}
