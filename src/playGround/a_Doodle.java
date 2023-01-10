@@ -3,10 +3,14 @@ package playGround;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.function.BiPredicate;
 
 public class a_Doodle{
 	
 	public static void main(String[] args) {
+		
+		BiPredicate<Integer, Integer> pi = (x,y) -> x.equals(y);
+		System.out.println(pi.test(10, 11));
 		
 		byte[] b = new byte[] {1,2,3,4,5};
 		try(FileOutputStream fos = new FileOutputStream("C://Users//user/mors.txt")) {
@@ -34,6 +38,7 @@ public class a_Doodle{
 			}
 		}
 		System.out.println("end");
+
 				
 		
 		
