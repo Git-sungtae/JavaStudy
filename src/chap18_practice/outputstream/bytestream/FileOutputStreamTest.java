@@ -19,10 +19,13 @@ public class FileOutputStreamTest {
 		//계속 실행하면 계속 덮어써짐(overwirte 됨)
 		//overwrite말고 추가하는 append를 하고싶으면 ("output.txt",true)로 변경
 		try(FileOutputStream fos = new FileOutputStream("output.txt")){
-			fos.write(254);
-			fos.write(255);
-			fos.write(256);
-			fos.write(257);
+			byte[] buff = "BAC".getBytes();
+			System.out.println(buff[0]);
+			fos.write(String.valueOf(4).getBytes());
+			fos.write(buff);
+			fos.write(buff,1,2);
+			fos.write(65);
+			fos.write(99);
 		} catch(IOException e){
 			System.out.println(e);
 		}

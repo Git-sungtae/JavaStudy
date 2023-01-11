@@ -1,1 +1,4 @@
-ABCDasdasdasdasdasdasd안녕하세요
+chartype : abc
+chartype : ABC
+inttype : 123
+Unicode : 가나다

@@ -3,7 +3,7 @@ package chap16_practice;
 import java.util.Arrays;
 import java.util.function.BinaryOperator;
 
-//2) BinaryOpertorfmf 구현한 클래스를 만드는 방법
+//2) BinaryOpertor를 구현한 클래스를 만드는 방법
 class CompareString<T> implements BinaryOperator<T>{
 
 	@Override
