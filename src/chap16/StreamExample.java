@@ -5,13 +5,20 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.IntSummaryStatistics;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.function.BiConsumer;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.regex.Pattern;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+import java.util.stream.Collector.Characteristics;
 
 class Product{
 	String name;
@@ -172,7 +179,6 @@ public class StreamExample {
 		
 		//Reduction
 		//reduce()
-		
 		//Optional<T> reduce(BinaryOperator<T> accumulator);
 		//T reduce(T identity, BinaryOperator<T> accumulator);
 		//<U> U reduce(U identity, Bifunction<U, ? super T, U> accumulator, BinaryOperator<U> combiner);
@@ -294,10 +300,47 @@ public class StreamExample {
 		//특정타입으로 결과를 collect한 이후 추가 작업이 필요 할 경우 사용
 		//<T,A,R,RR> Collector<T,A,RR> collectingAndThen(Collector<T,A,R> downstream, Function<R,RR> finisher) { ... })
 		//finisher는 collect를 한 후 실행할 작업을 의미
-
 		 System.out.println(productList2.stream()
 				.collect(Collectors.collectingAndThen(Collectors.toList(), el -> el.get(0) )));
 		
+		//Collector.of
+		//<T, A, R> Collector<T, A, R> of(Supplier<A> supplier, → New Collector 생성 
+        // 								BiConsumer<A, T> accumulator, → 두 값을 가지고 계산
+        // 								BinaryOperator<A> combiner, → 계산한 결과를 수집하는 함수
+        // 								Function<A, R> finisher,
+        // 								Characteristics... characteristics)
+		 
+		//Collector 생성
+		Collector<Product,?,LinkedList<Product>> toLinkedList =
+				Collector.of(LinkedList::new,
+						LinkedList::add,
+						(first, second) -> {
+							first.addAll(second);
+							return first;
+						}); 
+		 
+		LinkedList<Product> linkedListOfPersons = 
+				productList2.stream()
+				.collect(toLinkedList);
+		
+		//Matching
+		//Predicate 람다식을 받아 조건을 만족하는 요소가 있는지 boolean을 리턴
+		//anyMatch(), allMatch(), noneMatch()
+		//boolean anyMatch(Predicate<? super T> predicate);
+		//boolean allMatch(Predicate<? super T> predicate);
+		//boolean noneMatch(Predicate<? super T> predicate);
+		
+		boolean anyMatch = names.stream()
+				.anyMatch(name -> name.contains("a"));
+		boolean allMatch = names.stream()
+				.allMatch(name -> name.length() > 3);
+		boolean noneMatch = names.stream()
+				.noneMatch(name -> name.endsWith("s"));
+		
+		//Iterating
+		//foreach()
+		//보통 System.out.println();를 통해 출력할 때 사용
+		names.stream().forEach(System.out::println);
 		
 	}//메인
 
