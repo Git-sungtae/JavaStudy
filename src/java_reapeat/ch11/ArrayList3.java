@@ -16,7 +16,7 @@ public class ArrayList3 {
 		System.out.println("요소의 개수 : " + list.size());
 		System.out.println(">> Iterator 객체로 요소 얻기 <<");
 		
-		Iterator elements = list.iterator();
+		Iterator<String> elements = list.iterator();
 		//.hasnext() : 요소가 있으면 true
 		//.next() : 요소를 가져옴
 		while (elements.hasNext()) {

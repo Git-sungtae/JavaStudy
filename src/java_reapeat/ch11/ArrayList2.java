@@ -44,7 +44,7 @@ public class ArrayList2 {
 		System.out.println("3번인덱스 출력 : " + list.get(3));
 		
 		for (Iterator<String> iterator = list.iterator(); iterator.hasNext();) {
-			String string = (String) iterator.next();
+			String string = iterator.next();
 			if (string.equals("박수")) {
 				list.set(list.indexOf(string), "론메");
 			}

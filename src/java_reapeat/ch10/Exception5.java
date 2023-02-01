@@ -16,7 +16,8 @@ public class Exception5 {
 		} catch (Exception e) {
 			System.out.println(4);
 			return;
-		} finally {
+		} 
+		finally {
 			System.out.println("예외발생여부에 관계없이 항상 실행되는 문장" + 5);
 		}
 		
