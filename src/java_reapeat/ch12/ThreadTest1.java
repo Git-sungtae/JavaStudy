@@ -39,10 +39,10 @@ public class ThreadTest1 {
 		ThreadExample1 a2 = new ThreadExample1("subThreadB");
 		
 		//start() : 디스크에있는 자바파일을 메모리에 올려보냄(스레드 단위로)
-//		a1.start();
-//		a2.start();
-		a1.run();
-		a2.run();
+		a1.start();
+		a2.start();
+//		a1.run();
+//		a2.run();
 		
 		for (int i = 1; i <= 100; i++) {
 			System.out.print("Main " + i + "\t");
